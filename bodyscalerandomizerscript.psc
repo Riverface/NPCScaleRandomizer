@@ -8,7 +8,6 @@ Spell Property BSRKickSpell Auto
 Spell Property BSRGetSetSpell Auto
 Spell Property BSRLoadSpell Auto
 ;MagicEffect Property BSRSetScaleEffect Auto
-
 Bool Property BellyRandomizeEnable Auto Hidden
 Bool Property BustRandomizeEnable = True Auto Hidden
 Bool Property ButtRandomizeEnable Auto Hidden
@@ -31,153 +30,62 @@ Float Property PenisMin = 0.80 Auto Hidden
 Float Property UpdateInterval = 10.00 Auto Hidden
 Float Property WeightMax = 100.00 Auto Hidden
 Float Property WeightMin = 0.00 Auto Hidden
-
 Float Property NPCCalfMin = 0.75 Auto Hidden
 Float Property NPCCalfMax = 1.25 Auto Hidden
-
 Float Property NPCClavicleMin = 0.75 Auto Hidden
 Float Property NPCClavicleMax = 1.25 Auto Hidden
-
+Float Property NPCThumb0Min = 0.75 Auto Hidden
+Float Property NPCThumb0Max = 1.25 Auto Hidden
 Float Property NPCThumb1Min = 0.75 Auto Hidden
 Float Property NPCThumb1Max = 1.25 Auto Hidden
 Float Property NPCThumb2Min = 0.75 Auto Hidden
 Float Property NPCThumb2Max = 1.25 Auto Hidden
-Float Property NPCThumb3Min = 0.75 Auto Hidden
-Float Property NPCThumb3Max = 1.25 Auto Hidden
-
 Float Property NPCFinger11Min = 0.75 Auto Hidden
 Float Property NPCFinger11Max = 1.25 Auto Hidden
-
 Float Property NPCFinger12Min = 0.75 Auto Hidden
 Float Property NPCFinger12Max = 1.25 Auto Hidden
-
 Float Property NPCFinger13Min = 0.75 Auto Hidden
 Float Property NPCFinger13Max = 1.25 Auto Hidden
-
 Float Property NPCFinger21Min = 0.75 Auto Hidden
 Float Property NPCFinger21Max = 1.25 Auto Hidden
-
 Float Property NPCFinger22Min = 0.75 Auto Hidden
 Float Property NPCFinger22Max = 1.25 Auto Hidden
-
 Float Property NPCFinger23Min = 0.75 Auto Hidden
 Float Property NPCFinger23Max = 1.25 Auto Hidden
-
 Float Property NPCFinger31Min = 0.75 Auto Hidden
 Float Property NPCFinger31Max = 1.25 Auto Hidden
-
 Float Property NPCFinger32Min = 0.75 Auto Hidden
 Float Property NPCFinger32Max = 1.25 Auto Hidden
-
 Float Property NPCFinger33Min = 0.75 Auto Hidden
 Float Property NPCFinger33Max = 1.25 Auto Hidden
-
 Float Property NPCFinger41Min = 0.75 Auto Hidden
 Float Property NPCFinger41Max = 1.25 Auto Hidden
-
 Float Property NPCFinger42Min = 0.75 Auto Hidden
 Float Property NPCFinger42Max = 1.25 Auto Hidden
-
-
 Float Property NPCFinger43Max = 1.25 Auto Hidden
 Float Property NPCFinger43Min = 0.75 Auto Hidden
-
 Float Property NPCFootMax = 1.25 Auto Hidden
 Float Property NPCFootMin = 0.75 Auto Hidden
-
 Float Property NPCForearmMax = 1.25 Auto Hidden
 Float Property NPCForearmMin = 0.75 Auto Hidden
-
 Float Property NPCHandMax = 1.25 Auto Hidden
 Float Property NPCHandMin = 0.75 Auto Hidden
-
-Float Property NPCLThighMax = 1.25 Auto Hidden
-Float Property NPCLThighMin = 0.75 Auto Hidden
-
+Float Property NPCThighMax = 1.25 Auto Hidden
+Float Property NPCThighMin = 0.75 Auto Hidden
 Float Property NPCLToe0Max = 1.25 Auto Hidden
 Float Property NPCLToe0Min = 0.75 Auto Hidden
-
 Float Property NPCUpperArmMax = 1.25 Auto Hidden
 Float Property NPCUpperArmMin = 0.75 Auto Hidden
-
 Float Property NPCPelvisMax = 1.25 Auto Hidden
 Float Property NPCPelvisMin = 0.75 Auto Hidden
-
-Float Property NPCRCalfMax = 1.25 Auto Hidden
-Float Property NPCRCalfMin = 0.75 Auto Hidden
-
-Float Property NPCRClavicleMax = 1.25 Auto Hidden
-Float Property NPCRClavicleMin = 0.75 Auto Hidden
-
-Float Property NPCRFinger01Max = 1.25 Auto Hidden
-Float Property NPCRFinger01Min = 0.75 Auto Hidden
-
-Float Property NPCRFinger02Max = 1.25 Auto Hidden
-Float Property NPCRFinger02Min = 0.75 Auto Hidden
-
-Float Property NPCRFinger03Max = 1.25 Auto Hidden
-Float Property NPCRFinger03Min = 0.75 Auto Hidden
-
-Float Property NPCRFinger11Max = 1.25 Auto Hidden
-Float Property NPCRFinger11Min = 0.75 Auto Hidden
-
-Float Property NPCRFinger12Max = 1.25 Auto Hidden
-Float Property NPCRFinger12Min = 0.75 Auto Hidden
-
-Float Property NPCRFinger13Max = 1.25 Auto Hidden
-Float Property NPCRFinger13Min = 0.75 Auto Hidden
-
-Float Property NPCRFinger21Max = 1.25 Auto Hidden
-Float Property NPCRFinger21Min = 0.75 Auto Hidden
-
-Float Property NPCRFinger22Max = 1.25 Auto Hidden
-Float Property NPCRFinger22Min = 0.75 Auto Hidden
-
-Float Property NPCRFinger23Max = 1.25 Auto Hidden
-Float Property NPCRFinger23Min = 0.75 Auto Hidden
-
-Float Property NPCRFinger31Max = 1.25 Auto Hidden
-Float Property NPCRFinger31Min = 0.75 Auto Hidden
-
-Float Property NPCRFinger32Max = 1.25 Auto Hidden
-Float Property NPCRFinger32Min = 0.75 Auto Hidden
-
-Float Property NPCRFinger33Max = 1.25 Auto Hidden
-Float Property NPCRFinger33Min = 0.75 Auto Hidden
-
-Float Property NPCRFinger41Max = 1.25 Auto Hidden
-Float Property NPCRFinger41Min = 0.75 Auto Hidden
-
-Float Property NPCRFinger42Max = 1.25 Auto Hidden
-Float Property NPCRFinger42Min = 0.75 Auto Hidden
-
-Float Property NPCRFinger43Max = 1.25 Auto Hidden
-Float Property NPCRFinger43Min = 0.75 Auto Hidden
-
-Float Property NPCRFootMax = 1.25 Auto Hidden
-Float Property NPCRFootMin = 0.75 Auto Hidden
-
-Float Property NPCRForearmMax = 1.25 Auto Hidden
-Float Property NPCRForearmMin = 0.75 Auto Hidden
-
-Float Property NPCRHandMax = 1.25 Auto Hidden
-Float Property NPCRHandMin = 0.75 Auto Hidden
-
-Float Property NPCRThighMax = 1.25 Auto Hidden
-Float Property NPCRThighMin = 0.75 Auto Hidden
-
-Float Property NPCRToe0Max = 1.25 Auto Hidden
-Float Property NPCRToe0Min = 0.75 Auto Hidden
-
-Float Property NPCRUpperArmMax = 1.25 Auto Hidden
-Float Property NPCRUpperArmMin = 0.75 Auto Hidden
-
+Float Property NPCThumb3Max = 1.25 Auto Hidden
+Float Property NPCThumb3Min = 0.75 Auto Hidden
+Float Property NPCToe0Max = 1.25 Auto Hidden
+Float Property NPCToe0Min = 0.75 Auto Hidden
 Float Property NPCSpine1Max = 1.25 Auto Hidden
 Float Property NPCSpine1Min = 0.75 Auto Hidden
-
 Float Property NPCSpine2Max = 1.25 Auto Hidden
 Float Property NPCSpine2Min = 0.75 Auto Hidden
-
 Float Property NPCSpineMax = 1.25 Auto Hidden
 Float Property NPCSpineMin = 0.75 Auto Hidden
 Int Property GetActorKey = 49 Auto Hidden
@@ -218,9 +126,9 @@ String Property NPCLUpperArmNode = "NPC L UpperArm" AutoReadOnly
 String Property NPCPelvisNode = "NPC Pelvis" AutoReadOnly
 String Property NPCRCalfNode = "NPC R Calf" AutoReadOnly
 String Property NPCRClavicleNode = "NPC R Clavicle" AutoReadOnly
-String Property NPCRFinger00Node = "NPC R Finger00" AutoReadOnly
-String Property NPCRFinger01Node = "NPC R Finger01" AutoReadOnly
-String Property NPCRFinger02Node = "NPC R Finger02" AutoReadOnly
+String Property NPCRThumb0Node = "NPC R Finger00" AutoReadOnly
+String Property NPCRThumb1Node = "NPC R Finger01" AutoReadOnly
+String Property NPCRThumb2Node = "NPC R Finger02" AutoReadOnly
 String Property NPCRFinger10Node = "NPC R Finger10" AutoReadOnly
 String Property NPCRFinger11Node = "NPC R Finger11" AutoReadOnly
 String Property NPCRFinger12Node = "NPC R Finger12" AutoReadOnly
@@ -250,8 +158,6 @@ String Property RBreastNode3 = "R Breast02" AutoReadOnly
 String Property RBreastNode4 = "R Breast03" AutoReadOnly
 String Property RButtNode = "NPC R Butt" AutoReadOnly
 String Property ScrotumNode = "NPC GenitalsScrotum [GenScrot]" AutoReadOnly
-
-
 Float Property HeightDevArgonianMaxFemale = 0.00 Auto Hidden
 Float Property HeightDevArgonianMinFemale = 0.00 Auto Hidden
 Float Property HeightDevBretonMaxFemale = 0.00 Auto Hidden
@@ -292,7 +198,6 @@ Float Property HeightDevRedguardMaxMale = 0.00 Auto Hidden
 Float Property HeightDevRedguardMinMale = 0.00 Auto Hidden
 Float Property HeightDevWoodElfMaxMale = 0.00 Auto Hidden
 Float Property HeightDevWoodElfMinMale = 0.00 Auto Hidden
-
 Float Function GetRaceDev(Actor ActorRef, Int flag)
 	If (ActorRef == None)
 		return 0.0
@@ -497,7 +402,7 @@ Function GetRandomScale(Actor ActorRef)
 EndFunction
 
 Function GetRandomThigh(Actor ActorRef)
-			Float Random = Utility.RandomFloat(NPCLThighMin, NPCLThighMax)		
+			Float Random = Utility.RandomFloat(NPCThighMin, NPCThighMax)		
 		SetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Thigh", Random)
 EndFunction
 Function GetRandomCalf(Actor ActorRef)
@@ -579,15 +484,15 @@ Function GetRandomFinger43(Actor ActorRef)
 EndFunction
 
 Function GetRandomThumb1(Actor ActorRef)
-			Float Random = Utility.RandomFloat(NPCLThumb1Min, NPCLThumb1Max)		
+			Float Random = Utility.RandomFloat(NPCThumb1Min, NPCThumb1Max)		
 		SetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Thumb1", Random)
 EndFunction
 Function GetRandomThumb2(Actor ActorRef)
-			Float Random = Utility.RandomFloat(NPCLThumb2Min, NPCLThumb2Max)		
+			Float Random = Utility.RandomFloat(NPCThumb2Min, NPCThumb2Max)		
 		SetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Thumb2", Random)
 EndFunction
 Function GetRandomThumb3(Actor ActorRef)
-			Float Random = Utility.RandomFloat(NPCLThumb3Min, NPCLThumb3Max)		
+			Float Random = Utility.RandomFloat(NPCThumb3Min, NPCThumb3Max)		
 		SetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Thumb3", Random)
 EndFunction
 
