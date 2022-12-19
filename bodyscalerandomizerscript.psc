@@ -364,40 +364,29 @@ Function GetRandomScale(Actor ActorRef)
 	GetRandomBelly(ActorRef)
 	GetRandomHeight(ActorRef)
 	GetRandomWeight(ActorRef)
-
 	GetRandomThigh(ActorRef)
-	
 	GetRandomCalf(ActorRef)
-
-	GetPelvis(ActorRef)
-
+	GetRandomPelvis(ActorRef)
 	GetRandomUpperArm(ActorRef)
 	GetRandomForearm(ActorRef)
-
 	GetRandomSpine0(ActorRef)
 	GetRandomSpine1(ActorRef)
 	GetRandomSpine2(ActorRef)
-	
 	GetRandomFinger11(ActorRef)
 	GetRandomFinger12(ActorRef)
 	GetRandomFinger13(ActorRef)
-	
 	GetRandomFinger21(ActorRef)
 	GetRandomFinger22(ActorRef)
 	GetRandomFinger23(ActorRef)
-	
 	GetRandomFinger31(ActorRef)
 	GetRandomFinger32(ActorRef)
 	GetRandomFinger33(ActorRef)
-	
 	GetRandomFinger41(ActorRef)
 	GetRandomFinger42(ActorRef)
 	GetRandomFinger43(ActorRef)
-	
 	GetRandomThumb1(ActorRef)
 	GetRandomThumb2(ActorRef)
 	GetRandomThumb3(ActorRef)
-	
 	ActorRef.AddToFaction(BSRInitialized)
 EndFunction
 
@@ -409,7 +398,7 @@ Function GetRandomCalf(Actor ActorRef)
 			Float Random = Utility.RandomFloat(NPCCalfMin, NPCCalfMax)		
 		SetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Calf", Random)
 EndFunction
-Function GetPelvis(Actor ActorRef)
+Function GetRandomPelvis(Actor ActorRef)
 			Float Random = Utility.RandomFloat(NPCPelvisMin, NPCPelvisMax)		
 		SetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Pelvis", Random)
 EndFunction
@@ -596,6 +585,30 @@ Function SetActorScale(Actor ActorRef)
 			SetScaleWeight(ActorRef)
 		EndIf
 	EndIf
+
+	SetRandomThigh(ActorRef)
+	SetRandomCalf(ActorRef)
+	SetRandomPelvis(ActorRef)
+	SetRandomUpperArm(ActorRef)
+	SetRandomForearm(ActorRef)
+	SetRandomSpine0(ActorRef)
+	SetRandomSpine1(ActorRef)
+	SetRandomSpine2(ActorRef)
+	SetRandomFinger11(ActorRef)
+	SetRandomFinger12(ActorRef)
+	SetRandomFinger13(ActorRef)
+	SetRandomFinger21(ActorRef)
+	SetRandomFinger22(ActorRef)
+	SetRandomFinger23(ActorRef)
+	SetRandomFinger31(ActorRef)
+	SetRandomFinger32(ActorRef)
+	SetRandomFinger33(ActorRef)
+	SetRandomFinger41(ActorRef)
+	SetRandomFinger42(ActorRef)
+	SetRandomFinger43(ActorRef)
+	SetRandomThumb1(ActorRef)
+	SetRandomThumb2(ActorRef)
+	SetRandomThumb3(ActorRef)
 EndFunction
 
 Function SetScaleBust(Actor ActorRef)
@@ -715,8 +728,11 @@ Function SetRandomCalf(Actor ActorRef)
 	If NetImmerse.HasNode(ActorRef, NPCLCalfNode, False) && (NewCalf > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCLCalfNode, NewCalf, False)
 	EndIf
+	If NetImmerse.HasNode(ActorRef, NPCRCalfNode, False) && (NewCalf > 0.0)
+		NetImmerse.SetNodeScale(ActorRef, NPCRCalfNode, NewCalf, False)
+	EndIf
 EndFunction
-Function SetPelvis(Actor ActorRef)
+Function SetRandomPelvis(Actor ActorRef)
 		Float NewPelvis
 		If GetIntValue(ActorRef.GetLeveledActorBase(), "BSR_NoPelvis") != 1
 			NewPelvis = GetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Pelvis")
