@@ -1,93 +1,119 @@
 Scriptname BodyScaleRandomizerScript Extends Quest
-
 Import StorageUtil
 Import SexLabFramework
+Import RaceMenuPluginXPMSE
 
 Actor Property PlayerRef Auto
 Spell Property BSRKickSpell Auto
 Spell Property BSRGetSetSpell Auto
 Spell Property BSRLoadSpell Auto
 ;MagicEffect Property BSRSetScaleEffect Auto
-Bool Property BellyRandomizeEnable Auto Hidden
-Bool Property BustRandomizeEnable = True Auto Hidden
-Bool Property ButtRandomizeEnable Auto Hidden
-Bool Property HeightRandomizeEnable Auto Hidden
-Bool Property PenisRandomizeEnable = True Auto Hidden
-Bool Property WeightRandomizeEnable Auto Hidden
+Bool Property BellyEnable Auto Hidden
+Bool Property BustEnable = True Auto Hidden
+Bool Property ButtEnable Auto Hidden
+Bool Property HeightEnable = True Auto Hidden
+Bool Property PenisEnable = True Auto Hidden
+Bool Property WeightEnable = True Auto Hidden
+Bool Property NPCCalfEnable = True Auto Hidden
+Bool Property NPCClavicleEnable = True Auto Hidden
+Bool Property NPCThumb0Enable = True Auto Hidden
+Bool Property NPCThumb1Enable = True Auto Hidden
+Bool Property NPCThumb2Enable = True Auto Hidden
+Bool Property NPCFinger10Enable = True Auto Hidden
+Bool Property NPCFinger11Enable = True Auto Hidden
+Bool Property NPCFinger12Enable = True Auto Hidden
+Bool Property NPCFinger20Enable = True Auto Hidden
+Bool Property NPCFinger21Enable = True Auto Hidden
+Bool Property NPCFinger22Enable = True Auto Hidden
+Bool Property NPCFinger30Enable = True Auto Hidden
+Bool Property NPCFinger31Enable = True Auto Hidden
+Bool Property NPCFinger32Enable = True Auto Hidden
+Bool Property NPCFinger40Enable = True Auto Hidden
+Bool Property NPCFinger41Enable = True Auto Hidden
+Bool Property NPCFinger42Enable = True Auto Hidden
+Bool Property NPCFootEnable = True Auto Hidden
+Bool Property NPCForearmEnable = True Auto Hidden
+Bool Property NPCHandEnable = True Auto Hidden
+Bool Property NPCThighEnable = True Auto Hidden
+Bool Property NPCLToe0Enable = True Auto Hidden
+Bool Property NPCUpperArmEnable = True Auto Hidden
+Bool Property NPCPelvisEnable = True Auto Hidden
+Bool Property NPCToe0Enable = True Auto Hidden
+Bool Property NPCSpine0Enable = True Auto Hidden
+Bool Property NPCSpine1Enable = True Auto Hidden
+Bool Property NPCSpine2Enable = True Auto Hidden
 Faction Property BSRInitialized Auto
-Float Property BellyMax = 2.00 Auto Hidden
+Float Property BellyMax = 5.00 Auto Hidden
 Float Property BellyMin = 1.00 Auto Hidden
-Float Property BustMax = 1.50 Auto Hidden
+Float Property BustMax = 3.50 Auto Hidden
 Float Property BustMin = 0.80 Auto Hidden
-Float Property ButtMax = 1.50 Auto Hidden
+Float Property ButtMax = 3.50 Auto Hidden
 Float Property ButtMin = 0.80 Auto Hidden
-Float Property HeightMaxFemale = 1.04 Auto Hidden
-Float Property HeightMaxMale = 1.07 Auto Hidden
-Float Property HeightMinFemale = 0.94 Auto Hidden
-Float Property HeightMinMale = 0.97 Auto Hidden
+Float Property HeightMaxFemale = 2.00 Auto Hidden
+Float Property HeightMaxMale = 2.00 Auto Hidden
+Float Property HeightMinFemale = 0.75 Auto Hidden
+Float Property HeightMinMale = 0.75 Auto Hidden
 Float Property PenisMax = 1.50 Auto Hidden
 Float Property PenisMin = 0.80 Auto Hidden
 Float Property UpdateInterval = 10.00 Auto Hidden
 Float Property WeightMax = 100.00 Auto Hidden
 Float Property WeightMin = 0.00 Auto Hidden
 Float Property NPCCalfMin = 0.75 Auto Hidden
-Float Property NPCCalfMax = 1.25 Auto Hidden
+Float Property NPCCalfMax = 2.00 Auto Hidden
 Float Property NPCClavicleMin = 0.75 Auto Hidden
-Float Property NPCClavicleMax = 1.25 Auto Hidden
+Float Property NPCClavicleMax = 2.00 Auto Hidden
 Float Property NPCThumb0Min = 0.75 Auto Hidden
-Float Property NPCThumb0Max = 1.25 Auto Hidden
+Float Property NPCThumb0Max = 2.00 Auto Hidden
 Float Property NPCThumb1Min = 0.75 Auto Hidden
-Float Property NPCThumb1Max = 1.25 Auto Hidden
+Float Property NPCThumb1Max = 2.00 Auto Hidden
 Float Property NPCThumb2Min = 0.75 Auto Hidden
-Float Property NPCThumb2Max = 1.25 Auto Hidden
-Float Property NPCFinger11Min = 0.75 Auto Hidden
-Float Property NPCFinger11Max = 1.25 Auto Hidden
-Float Property NPCFinger12Min = 0.75 Auto Hidden
-Float Property NPCFinger12Max = 1.25 Auto Hidden
-Float Property NPCFinger13Min = 0.75 Auto Hidden
-Float Property NPCFinger13Max = 1.25 Auto Hidden
-Float Property NPCFinger21Min = 0.75 Auto Hidden
-Float Property NPCFinger21Max = 1.25 Auto Hidden
-Float Property NPCFinger22Min = 0.75 Auto Hidden
-Float Property NPCFinger22Max = 1.25 Auto Hidden
-Float Property NPCFinger23Min = 0.75 Auto Hidden
-Float Property NPCFinger23Max = 1.25 Auto Hidden
-Float Property NPCFinger31Min = 0.75 Auto Hidden
-Float Property NPCFinger31Max = 1.25 Auto Hidden
-Float Property NPCFinger32Min = 0.75 Auto Hidden
-Float Property NPCFinger32Max = 1.25 Auto Hidden
-Float Property NPCFinger33Min = 0.75 Auto Hidden
-Float Property NPCFinger33Max = 1.25 Auto Hidden
-Float Property NPCFinger41Min = 0.75 Auto Hidden
-Float Property NPCFinger41Max = 1.25 Auto Hidden
-Float Property NPCFinger42Min = 0.75 Auto Hidden
-Float Property NPCFinger42Max = 1.25 Auto Hidden
-Float Property NPCFinger43Max = 1.25 Auto Hidden
-Float Property NPCFinger43Min = 0.75 Auto Hidden
-Float Property NPCFootMax = 1.25 Auto Hidden
-Float Property NPCFootMin = 0.75 Auto Hidden
-Float Property NPCForearmMax = 1.25 Auto Hidden
-Float Property NPCForearmMin = 0.75 Auto Hidden
-Float Property NPCHandMax = 1.25 Auto Hidden
-Float Property NPCHandMin = 0.75 Auto Hidden
-Float Property NPCThighMax = 1.25 Auto Hidden
-Float Property NPCThighMin = 0.75 Auto Hidden
-Float Property NPCLToe0Max = 1.25 Auto Hidden
-Float Property NPCLToe0Min = 0.75 Auto Hidden
-Float Property NPCUpperArmMax = 1.25 Auto Hidden
-Float Property NPCUpperArmMin = 0.75 Auto Hidden
-Float Property NPCPelvisMax = 1.25 Auto Hidden
-Float Property NPCPelvisMin = 0.75 Auto Hidden
-Float Property NPCThumb3Max = 1.25 Auto Hidden
-Float Property NPCThumb3Min = 0.75 Auto Hidden
-Float Property NPCToe0Max = 1.25 Auto Hidden
-Float Property NPCToe0Min = 0.75 Auto Hidden
-Float Property NPCSpine1Max = 1.25 Auto Hidden
-Float Property NPCSpine1Min = 0.75 Auto Hidden
-Float Property NPCSpine2Max = 1.25 Auto Hidden
-Float Property NPCSpine2Min = 0.75 Auto Hidden
-Float Property NPCSpineMax = 1.25 Auto Hidden
-Float Property NPCSpineMin = 0.75 Auto Hidden
+Float Property NPCThumb2Max = 2.005 Auto Hidden
+Float Property NPCFinger11Min = 0.5 Auto Hidden
+Float Property NPCFinger11Max = 1.50 Auto Hidden
+Float Property NPCFinger12Min = 0.5 Auto Hidden
+Float Property NPCFinger12Max = 1.50 Auto Hidden
+Float Property NPCFinger13Min = 0.5 Auto Hidden
+Float Property NPCFinger13Max = 1.50 Auto Hidden
+Float Property NPCFinger21Min = 0.5 Auto Hidden
+Float Property NPCFinger21Max = 1.50 Auto Hidden
+Float Property NPCFinger22Min = 0.5 Auto Hidden
+Float Property NPCFinger22Max = 1.50 Auto Hidden
+Float Property NPCFinger23Min = 0.5 Auto Hidden
+Float Property NPCFinger23Max = 1.50 Auto Hidden
+Float Property NPCFinger31Min = 0.5 Auto Hidden
+Float Property NPCFinger31Max = 1.50 Auto Hidden
+Float Property NPCFinger32Min = 0.5 Auto Hidden
+Float Property NPCFinger32Max = 1.50 Auto Hidden
+Float Property NPCFinger33Min = 0.5 Auto Hidden
+Float Property NPCFinger33Max = 1.50 Auto Hidden
+Float Property NPCFinger41Min = 0.5 Auto Hidden
+Float Property NPCFinger41Max = 1.50 Auto Hidden
+Float Property NPCFinger42Min = 0.5 Auto Hidden
+Float Property NPCFinger42Max = 2.00 Auto Hidden
+Float Property NPCFinger43Max = 1.50 Auto Hidden
+Float Property NPCFinger43Min = 0.5 Auto Hidden
+Float Property NPCFootMax = 1.50 Auto Hidden
+Float Property NPCFootMin = 0.5 Auto Hidden
+Float Property NPCForearmMax = 1.50 Auto Hidden
+Float Property NPCForearmMin = 0.5 Auto Hidden
+Float Property NPCHandMax = 1.50 Auto Hidden
+Float Property NPCHandMin = 0.5 Auto Hidden
+Float Property NPCThighMax = 1.50 Auto Hidden
+Float Property NPCThighMin = 0.5 Auto Hidden
+Float Property NPCLToe0Max = 1.50 Auto Hidden
+Float Property NPCLToe0Min = 0.5 Auto Hidden
+Float Property NPCUpperArmMax = 1.50 Auto Hidden
+Float Property NPCUpperArmMin = 0.5 Auto Hidden
+Float Property NPCPelvisMax = 1.50 Auto Hidden
+Float Property NPCPelvisMin = 0.5 Auto Hidden
+Float Property NPCToe0Max = 1.50 Auto Hidden
+Float Property NPCToe0Min = 0.5 Auto Hidden
+Float Property NPCSpine1Max = 1.50 Auto Hidden
+Float Property NPCSpine1Min = 0.5 Auto Hidden
+Float Property NPCSpine2Max = 1.50 Auto Hidden
+Float Property NPCSpine2Min = 0.5 Auto Hidden
+Float Property NPCSpineMax = 1.50 Auto Hidden
+Float Property NPCSpineMin = 0.5 Auto Hidden
 Int Property GetActorKey = 49 Auto Hidden
 Int Property NeckGapModKey Auto Hidden
 Int Property ReRandomizeKey = 50 Auto Hidden
@@ -98,66 +124,67 @@ String Property LBreastNode1 ="L Breast00" AutoReadOnly
 String Property LBreastNode2 ="L Breast01" AutoReadOnly
 String Property LBreastNode3 = "L Breast02" AutoReadOnly
 String Property LBreastNode4 = "L Breast03" AutoReadOnly
-String Property LButtNode = "NPC L Butt" AutoReadOnly
-String Property NPCCOMNode = "NPC COM" AutoReadOnly
-String Property NPCLCalfNode = "NPC L Calf" AutoReadOnly
-String Property NPCLClavicleNode = "NPC L Clavicle" AutoReadOnly
-String Property NPCLThumb0Node = "NPC L Finger00" AutoReadOnly
-String Property NPCLThumb1Node = "NPC L Finger01" AutoReadOnly
-String Property NPCLThumb2Node = "NPC L Finger02" AutoReadOnly
-String Property NPCLFinger10Node = "NPC L Finger10" AutoReadOnly
-String Property NPCLFinger11Node = "NPC L Finger11" AutoReadOnly
-String Property NPCLFinger12Node = "NPC L Finger12" AutoReadOnly
-String Property NPCLFinger20Node = "NPC L Finger20" AutoReadOnly
-String Property NPCLFinger21Node = "NPC L Finger21" AutoReadOnly
-String Property NPCLFinger22Node = "NPC L Finger22" AutoReadOnly
-String Property NPCLFinger30Node = "NPC L Finger30" AutoReadOnly
-String Property NPCLFinger31Node = "NPC L Finger31" AutoReadOnly
-String Property NPCLFinger32Node = "NPC L Finger32" AutoReadOnly
-String Property NPCLFinger40Node = "NPC L Finger40" AutoReadOnly
-String Property NPCLFinger41Node = "NPC L Finger41" AutoReadOnly
-String Property NPCLFinger42Node = "NPC L Finger42" AutoReadOnly
-String Property NPCLFootNode = "NPC L Foot" AutoReadOnly
-String Property NPCLForearmNode = "NPC L Forearm" AutoReadOnly
-String Property NPCLHandNode = "NPC L Hand" AutoReadOnly
-String Property NPCLThighNode = "NPC L Thigh" AutoReadOnly
-String Property NPCLToe0Node = "NPC L Toe0" AutoReadOnly
-String Property NPCLUpperArmNode = "NPC L UpperArm" AutoReadOnly
-String Property NPCPelvisNode = "NPC Pelvis" AutoReadOnly
-String Property NPCRCalfNode = "NPC R Calf" AutoReadOnly
-String Property NPCRClavicleNode = "NPC R Clavicle" AutoReadOnly
-String Property NPCRThumb0Node = "NPC R Finger00" AutoReadOnly
-String Property NPCRThumb1Node = "NPC R Finger01" AutoReadOnly
-String Property NPCRThumb2Node = "NPC R Finger02" AutoReadOnly
-String Property NPCRFinger10Node = "NPC R Finger10" AutoReadOnly
-String Property NPCRFinger11Node = "NPC R Finger11" AutoReadOnly
-String Property NPCRFinger12Node = "NPC R Finger12" AutoReadOnly
-String Property NPCRFinger20Node = "NPC R Finger20" AutoReadOnly
-String Property NPCRFinger21Node = "NPC R Finger21" AutoReadOnly
-String Property NPCRFinger22Node = "NPC R Finger22" AutoReadOnly
-String Property NPCRFinger30Node = "NPC R Finger30" AutoReadOnly
-String Property NPCRFinger31Node = "NPC R Finger31" AutoReadOnly
-String Property NPCRFinger32Node = "NPC R Finger32" AutoReadOnly
-String Property NPCRFinger40Node = "NPC R Finger40" AutoReadOnly
-String Property NPCRFinger41Node = "NPC R Finger41" AutoReadOnly
-String Property NPCRFinger42Node = "NPC R Finger42" AutoReadOnly
-String Property NPCRFootNode = "NPC R Foot" AutoReadOnly
-String Property NPCRForearmNode = "NPC R Forearm" AutoReadOnly
-String Property NPCRHandNode = "NPC R Hand" AutoReadOnly
-String Property NPCRootNode = "NPC Root" AutoReadOnly
-String Property NPCRThighNode = "NPC R Thigh" AutoReadOnly
-String Property NPCRToe0Node = "NPC R Toe0" AutoReadOnly
-String Property NPCRUpperArmNode = "NPC R UpperArm" AutoReadOnly
-String Property NPCSpine1Node = "NPC Spine1" AutoReadOnly
-String Property NPCSpine2Node = "NPC Spine2" AutoReadOnly
-String Property NPCSpineNode = "NPC Spine" AutoReadOnly
 String Property RBreastNode = "NPC R Breast" AutoReadOnly
 String Property RBreastNode1 ="R Breast00" AutoReadOnly
 String Property RBreastNode2 ="R Breast01" AutoReadOnly
 String Property RBreastNode3 = "R Breast02" AutoReadOnly
 String Property RBreastNode4 = "R Breast03" AutoReadOnly
+String Property LButtNode = "NPC L Butt" AutoReadOnly
 String Property RButtNode = "NPC R Butt" AutoReadOnly
 String Property ScrotumNode = "NPC GenitalsScrotum [GenScrot]" AutoReadOnly
+String Property NPCCOMNode = "NPC COM [COM ]" AutoReadOnly
+String Property NPCLCalfNode = "NPC L Calf [LClf]" AutoReadOnly
+String Property NPCLClavicleNode = "NPC L Clavicle [LClv]" AutoReadOnly
+String Property NPCLThumb0Node = "NPC L Finger00 [LF00]" AutoReadOnly
+String Property NPCLThumb1Node = "NPC L Finger01 [LF01]" AutoReadOnly
+String Property NPCLThumb2Node = "NPC L Finger02 [LF02]" AutoReadOnly
+String Property NPCLFinger10Node = "NPC L Finger10 [LF10]" AutoReadOnly
+String Property NPCLFinger11Node = "NPC L Finger11 [LF11]" AutoReadOnly
+String Property NPCLFinger12Node = "NPC L Finger12 [LF12]" AutoReadOnly
+String Property NPCLFinger20Node = "NPC L Finger20 [LF20]" AutoReadOnly
+String Property NPCLFinger21Node = "NPC L Finger21 [LF21]" AutoReadOnly
+String Property NPCLFinger22Node = "NPC L Finger22 [LF22]" AutoReadOnly
+String Property NPCLFinger30Node = "NPC L Finger30 [LF30]" AutoReadOnly
+String Property NPCLFinger31Node = "NPC L Finger31 [LF31]" AutoReadOnly
+String Property NPCLFinger32Node = "NPC L Finger32 [LF32]" AutoReadOnly
+String Property NPCLFinger40Node = "NPC L Finger40 [LF40]" AutoReadOnly
+String Property NPCLFinger41Node = "NPC L Finger41 [LF41]" AutoReadOnly
+String Property NPCLFinger42Node = "NPC L Finger42 [LF42]" AutoReadOnly
+String Property NPCLFootNode = "NPC L Foot [Rft ]" AutoReadOnly
+String Property NPCLForearmNode = "NPC L Forearm [LLar]" AutoReadOnly
+String Property NPCLHandNode = "NPC L Hand [LHnd]" AutoReadOnly
+String Property NPCLThighNode = "NPC L Thigh [LThg]" AutoReadOnly
+String Property NPCLToe0Node = "NPC L Toe0 [LToe]" AutoReadOnly
+String Property NPCLUpperArmNode = "NPC L UpperArm [LUar]" AutoReadOnly
+String Property NPCPelvisNode = "NPC Pelvis [Pelv]" AutoReadOnly
+String Property NPCRCalfNode = "NPC R Calf [RClf]" AutoReadOnly
+String Property NPCRClavicleNode = "NPC R Clavicle [Rclv]" AutoReadOnly
+String Property NPCRThumb0Node = "NPC R Finger00 [RF00]" AutoReadOnly
+String Property NPCRThumb1Node = "NPC R Finger01 [RF01]" AutoReadOnly
+String Property NPCRThumb2Node = "NPC R Finger02 [RF02]" AutoReadOnly
+String Property NPCRFinger10Node = "NPC R Finger10 [RF10]" AutoReadOnly
+String Property NPCRFinger11Node = "NPC R Finger11 [RF11]" AutoReadOnly
+String Property NPCRFinger12Node = "NPC R Finger12 [RF12]" AutoReadOnly
+String Property NPCRFinger20Node = "NPC R Finger20 [RF20]" AutoReadOnly
+String Property NPCRFinger21Node = "NPC R Finger21 [RF21]" AutoReadOnly
+String Property NPCRFinger22Node = "NPC R Finger22 [RF22]" AutoReadOnly
+String Property NPCRFinger30Node = "NPC R Finger30 [RF30]" AutoReadOnly
+String Property NPCRFinger31Node = "NPC R Finger31 [RF31]" AutoReadOnly
+String Property NPCRFinger32Node = "NPC R Finger32 [RF32]" AutoReadOnly
+String Property NPCRFinger40Node = "NPC R Finger40 [RF40]" AutoReadOnly
+String Property NPCRFinger41Node = "NPC R Finger41 [RF41]" AutoReadOnly
+String Property NPCRFinger42Node = "NPC R Finger42 [RF42]" AutoReadOnly
+String Property NPCRFootNode = "NPC R Foot [Lft ]" AutoReadOnly
+String Property NPCRForearmNode = "NPC R Forearm [RLar]" AutoReadOnly
+String Property NPCRHandNode = "NPC R Hand [RHnd]" AutoReadOnly
+String Property NPCRThighNode = "NPC R Thigh [RThg]" AutoReadOnly
+String Property NPCRToe0Node = "NPC R Toe0 [RToe]" AutoReadOnly
+String Property NPCRUpperArmNode = "NPC R UpperArm [RUar]" AutoReadOnly
+String Property NPCSpine1Node = "NPC Spine1 [Spn0]" AutoReadOnly
+String Property NPCSpine2Node = "NPC Spine2 [Spn1]" AutoReadOnly
+String Property NPCSpineNode = "NPC Spine [Spn2]" AutoReadOnly
+
+
 Float Property HeightDevArgonianMaxFemale = 0.00 Auto Hidden
 Float Property HeightDevArgonianMinFemale = 0.00 Auto Hidden
 Float Property HeightDevBretonMaxFemale = 0.00 Auto Hidden
@@ -481,7 +508,7 @@ Function GetRandomThumb2(Actor ActorRef)
 		SetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Thumb2", Random)
 EndFunction
 Function GetRandomThumb3(Actor ActorRef)
-			Float Random = Utility.RandomFloat(NPCThumb3Min, NPCThumb3Max)		
+			Float Random = Utility.RandomFloat(NPCThumb0Min, NPCThumb0Max)		
 		SetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Thumb3", Random)
 EndFunction
 
@@ -565,50 +592,96 @@ Function GetRandomWeight(Actor ActorRef)
 EndFunction
 
 Function SetActorScale(Actor ActorRef)
-	If BustRandomizeEnable
+	If BustEnable
 		SetScaleBust(ActorRef)
 	EndIf
-	If PenisRandomizeEnable
+	If PenisEnable
 		SetScalePenis(ActorRef)
 	EndIf
-	If ButtRandomizeEnable
+	If ButtEnable
 		SetScaleButt(ActorRef)
 	EndIf
-	If BellyRandomizeEnable
+	If BellyEnable
 		SetScaleBelly(ActorRef)
 	EndIf
 	If (!ActorRef.IsDead())
-		If HeightRandomizeEnable
+		If HeightEnable
 			SetScaleHeight(ActorRef)
 		EndIf
-		If WeightRandomizeEnable
+		If WeightEnable
 			SetScaleWeight(ActorRef)
 		EndIf
 	EndIf
+	If (NPCThighEnable)
+		SetRandomThigh(ActorRef)
+	EndIf
+	If (NPCCalfEnable)
+		SetRandomCalf(ActorRef)
+	EndIf
+	If (NPCPelvisEnable)
+		SetRandomPelvis(ActorRef)
+	EndIf
+	If (NPCUpperArmEnable)
+		SetRandomUpperArm(ActorRef)
+	EndIf
+	If (NPCForearmEnable)
+		SetRandomForearm(ActorRef)
+	EndIf
+	If (NPCSpine0Enable)
+		SetRandomSpine0(ActorRef)
+	EndIf
+	If (NPCSpine1Enable)
+		SetRandomSpine1(ActorRef)
+	EndIf
+	If (NPCSpine2Enable)
+		SetRandomSpine2(ActorRef)
+	EndIf
+	If (NPCFinger10Enable)
+		SetRandomFinger11(ActorRef)
+	EndIf
+	If (NPCFinger11Enable)
+		SetRandomFinger12(ActorRef)
+	EndIf
+	If (NPCFinger12Enable)
+		SetRandomFinger13(ActorRef)
+	EndIf
+	If (NPCFinger20Enable)
+		SetRandomFinger21(ActorRef)
+	EndIf
+	If (NPCFinger21Enable)
+		SetRandomFinger22(ActorRef)
+	EndIf
+	If (NPCFinger22Enable)
+		SetRandomFinger23(ActorRef)
+	EndIf
+	If (NPCFinger30Enable)
+		SetRandomFinger31(ActorRef)
+	EndIf
+	If (NPCFinger31Enable)
+		SetRandomFinger32(ActorRef)
+	EndIf
+	If (NPCFinger32Enable)
+		SetRandomFinger33(ActorRef)
+	EndIf
+	If (NPCFinger40Enable)
+		SetRandomFinger41(ActorRef)
+	EndIf
+	If (NPCFinger41Enable)
+		SetRandomFinger42(ActorRef)
+	EndIf
+	If (NPCFinger42Enable)
+		SetRandomFinger43(ActorRef)
+	EndIf
+	If (NPCThumb1Enable)
+		SetRandomThumb1(ActorRef)
+	EndIf
+	If (NPCThumb2Enable)
+		SetRandomThumb2(ActorRef)
+	EndIf
+	If (NPCThumb0Enable)
+		SetRandomThumb3(ActorRef)
+	EndIf
 
-	SetRandomThigh(ActorRef)
-	SetRandomCalf(ActorRef)
-	SetRandomPelvis(ActorRef)
-	SetRandomUpperArm(ActorRef)
-	SetRandomForearm(ActorRef)
-	SetRandomSpine0(ActorRef)
-	SetRandomSpine1(ActorRef)
-	SetRandomSpine2(ActorRef)
-	SetRandomFinger11(ActorRef)
-	SetRandomFinger12(ActorRef)
-	SetRandomFinger13(ActorRef)
-	SetRandomFinger21(ActorRef)
-	SetRandomFinger22(ActorRef)
-	SetRandomFinger23(ActorRef)
-	SetRandomFinger31(ActorRef)
-	SetRandomFinger32(ActorRef)
-	SetRandomFinger33(ActorRef)
-	SetRandomFinger41(ActorRef)
-	SetRandomFinger42(ActorRef)
-	SetRandomFinger43(ActorRef)
-	SetRandomThumb1(ActorRef)
-	SetRandomThumb2(ActorRef)
-	SetRandomThumb3(ActorRef)
 EndFunction
 
 Function SetScaleBust(Actor ActorRef)
@@ -709,12 +782,16 @@ Function SetRandomThigh(Actor ActorRef)
 	If NetImmerse.HasNode(ActorRef, NPCLThighNode, False) && (NewThigh > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCLThighNode, NewThigh, False)
 	EndIf
+	If NetImmerse.HasNode(ActorRef, NPCRThighNode, False) && (NewThigh > 0.0)
+		NetImmerse.SetNodeScale(ActorRef, NPCRThighNode, NewThigh, False)
+	EndIf
 	If GetIntValue(ActorRef.GetLeveledActorBase(), "BSR_NoThigh") != 1
 		NewThigh = GetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Thigh")
 	EndIf
 	
 	If NetImmerse.HasNode(ActorRef, NPCRThighNode, False) && (NewThigh > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCRThighNode, NewThigh, False)
+		XPMS
 	EndIf
 EndFunction
 Function SetRandomCalf(Actor ActorRef)
@@ -727,6 +804,9 @@ Function SetRandomCalf(Actor ActorRef)
 	
 	If NetImmerse.HasNode(ActorRef, NPCLCalfNode, False) && (NewCalf > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCLCalfNode, NewCalf, False)
+	EndIf
+	If NetImmerse.HasNode(ActorRef, NPCRCalfNode, False) && (NewCalf > 0.0)
+		NetImmerse.SetNodeScale(ActorRef, NPCRCalfNode, NewCalf, False)
 	EndIf
 	If NetImmerse.HasNode(ActorRef, NPCRCalfNode, False) && (NewCalf > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCRCalfNode, NewCalf, False)
@@ -754,6 +834,9 @@ Function SetRandomUpperArm(Actor ActorRef)
 	If NetImmerse.HasNode(ActorRef, NPCLUpperArmNode, False) && (NewUpperArm > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCLUpperArmNode, NewUpperArm, False)
 	EndIf
+	If NetImmerse.HasNode(ActorRef, NPCRUpperArmNode, False) && (NewUpperArm > 0.0)
+		NetImmerse.SetNodeScale(ActorRef, NPCRUpperArmNode, NewUpperArm, False)
+	EndIf
 EndFunction
 Function SetRandomForearm(Actor ActorRef)
 
@@ -765,6 +848,9 @@ Function SetRandomForearm(Actor ActorRef)
 	
 	If NetImmerse.HasNode(ActorRef, NPCLForearmNode, False) && (NewForearm > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCLForearmNode, NewForearm, False)
+	EndIf
+	If NetImmerse.HasNode(ActorRef, NPCRForearmNode, False) && (NewForearm > 0.0)
+		NetImmerse.SetNodeScale(ActorRef, NPCRForearmNode, NewForearm, False)
 	EndIf
 EndFunction
 Function SetRandomSpine0(Actor ActorRef)
@@ -814,6 +900,9 @@ Function SetRandomFinger11(Actor ActorRef)
 	If NetImmerse.HasNode(ActorRef, NPCLFinger10Node, False) && (NewFinger11 > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCLFinger10Node, NewFinger11, False)
 	EndIf
+	If NetImmerse.HasNode(ActorRef, NPCRFinger10Node, False) && (NewFinger11 > 0.0)
+		NetImmerse.SetNodeScale(ActorRef, NPCRFinger10Node, NewFinger11, False)
+	EndIf
 EndFunction
 Function SetRandomFinger12(Actor ActorRef)
 
@@ -825,6 +914,9 @@ Function SetRandomFinger12(Actor ActorRef)
 	
 	If NetImmerse.HasNode(ActorRef, NPCLFinger10Node, False) && (NewFinger12 > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCLFinger10Node, NewFinger12, False)
+	EndIf
+	If NetImmerse.HasNode(ActorRef, NPCRFinger10Node, False) && (NewFinger12 > 0.0)
+		NetImmerse.SetNodeScale(ActorRef, NPCRFinger10Node, NewFinger12, False)
 	EndIf
 EndFunction
 Function SetRandomFinger13(Actor ActorRef)
@@ -838,6 +930,9 @@ Function SetRandomFinger13(Actor ActorRef)
 	If NetImmerse.HasNode(ActorRef, NPCLFinger12Node, False) && (NewFinger13 > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCLFinger12Node, NewFinger13, False)
 	EndIf
+	If NetImmerse.HasNode(ActorRef, NPCRFinger12Node, False) && (NewFinger13 > 0.0)
+		NetImmerse.SetNodeScale(ActorRef, NPCRFinger12Node, NewFinger13, False)
+	EndIf
 EndFunction
 Function SetRandomFinger21(Actor ActorRef)
 
@@ -849,6 +944,9 @@ Function SetRandomFinger21(Actor ActorRef)
 	
 	If NetImmerse.HasNode(ActorRef, NPCLFinger20Node, False) && (NewFinger21 > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCLFinger20Node, NewFinger21, False)
+	EndIf
+	If NetImmerse.HasNode(ActorRef, NPCRFinger20Node, False) && (NewFinger21 > 0.0)
+		NetImmerse.SetNodeScale(ActorRef, NPCRFinger20Node, NewFinger21, False)
 	EndIf
 EndFunction
 Function SetRandomFinger22(Actor ActorRef)
@@ -862,6 +960,9 @@ Function SetRandomFinger22(Actor ActorRef)
 	If NetImmerse.HasNode(ActorRef, NPCLFinger21Node, False) && (NewFinger22 > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCLFinger21Node, NewFinger22, False)
 	EndIf
+	If NetImmerse.HasNode(ActorRef, NPCRFinger21Node, False) && (NewFinger22 > 0.0)
+		NetImmerse.SetNodeScale(ActorRef, NPCRFinger21Node, NewFinger22, False)
+	EndIf
 EndFunction
 Function SetRandomFinger23(Actor ActorRef)
 
@@ -873,6 +974,9 @@ Function SetRandomFinger23(Actor ActorRef)
 	
 	If NetImmerse.HasNode(ActorRef, NPCLFinger22Node, False) && (NewFinger23 > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCLFinger22Node, NewFinger23, False)
+	EndIf
+	If NetImmerse.HasNode(ActorRef, NPCRFinger22Node, False) && (NewFinger23 > 0.0)
+		NetImmerse.SetNodeScale(ActorRef, NPCRFinger22Node, NewFinger23, False)
 	EndIf
 EndFunction
 Function SetRandomFinger31(Actor ActorRef)
@@ -886,6 +990,9 @@ Function SetRandomFinger31(Actor ActorRef)
 	If NetImmerse.HasNode(ActorRef, NPCLFinger30Node, False) && (NewFinger31 > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCLFinger30Node, NewFinger31, False)
 	EndIf
+	If NetImmerse.HasNode(ActorRef, NPCRFinger30Node, False) && (NewFinger31 > 0.0)
+		NetImmerse.SetNodeScale(ActorRef, NPCRFinger30Node, NewFinger31, False)
+	EndIf
 EndFunction
 Function SetRandomFinger32(Actor ActorRef)
 
@@ -897,6 +1004,9 @@ Function SetRandomFinger32(Actor ActorRef)
 	
 	If NetImmerse.HasNode(ActorRef, NPCLFinger31Node, False) && (NewFinger32 > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCLFinger31Node, NewFinger32, False)
+	EndIf
+	If NetImmerse.HasNode(ActorRef, NPCRFinger31Node, False) && (NewFinger32 > 0.0)
+		NetImmerse.SetNodeScale(ActorRef, NPCRFinger31Node, NewFinger32, False)
 	EndIf
 EndFunction
 Function SetRandomFinger33(Actor ActorRef)
@@ -910,6 +1020,9 @@ Function SetRandomFinger33(Actor ActorRef)
 	If NetImmerse.HasNode(ActorRef, NPCLFinger32Node, False) && (NewFinger33 > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCLFinger32Node, NewFinger33, False)
 	EndIf
+	If NetImmerse.HasNode(ActorRef, NPCRFinger32Node, False) && (NewFinger33 > 0.0)
+		NetImmerse.SetNodeScale(ActorRef, NPCRFinger32Node, NewFinger33, False)
+	EndIf
 EndFunction
 Function SetRandomFinger41(Actor ActorRef)
 
@@ -921,6 +1034,9 @@ Function SetRandomFinger41(Actor ActorRef)
 	
 	If NetImmerse.HasNode(ActorRef, NPCLFinger40Node, False) && (NewFinger41 > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCLFinger40Node, NewFinger41, False)
+	EndIf
+	If NetImmerse.HasNode(ActorRef, NPCRFinger40Node, False) && (NewFinger41 > 0.0)
+		NetImmerse.SetNodeScale(ActorRef, NPCRFinger40Node, NewFinger41, False)
 	EndIf
 EndFunction
 Function SetRandomFinger42(Actor ActorRef)
@@ -934,6 +1050,9 @@ Function SetRandomFinger42(Actor ActorRef)
 	If NetImmerse.HasNode(ActorRef, NPCLFinger41Node, False) && (NewFinger42 > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCLFinger41Node, NewFinger42, False)
 	EndIf
+	If NetImmerse.HasNode(ActorRef, NPCRFinger41Node, False) && (NewFinger42 > 0.0)
+		NetImmerse.SetNodeScale(ActorRef, NPCRFinger41Node, NewFinger42, False)
+	EndIf
 EndFunction
 Function SetRandomFinger43(Actor ActorRef)
 
@@ -945,6 +1064,9 @@ Function SetRandomFinger43(Actor ActorRef)
 	
 	If NetImmerse.HasNode(ActorRef, NPCLFinger42Node, False) && (NewFinger43 > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCLFinger42Node, NewFinger43, False)
+	EndIf
+	If NetImmerse.HasNode(ActorRef, NPCRFinger42Node, False) && (NewFinger43 > 0.0)
+		NetImmerse.SetNodeScale(ActorRef, NPCRFinger42Node, NewFinger43, False)
 	EndIf
 EndFunction
 Function SetRandomThumb1(Actor ActorRef)
@@ -958,6 +1080,9 @@ Function SetRandomThumb1(Actor ActorRef)
 	If NetImmerse.HasNode(ActorRef, NPCLThumb0Node, False) && (NewThumb1 > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCLThumb0Node, NewThumb1, False)
 	EndIf
+	If NetImmerse.HasNode(ActorRef, NPCRThumb0Node, False) && (NewThumb1 > 0.0)
+		NetImmerse.SetNodeScale(ActorRef, NPCRThumb0Node, NewThumb1, False)
+	EndIf
 EndFunction
 Function SetRandomThumb2(Actor ActorRef)
 
@@ -970,6 +1095,9 @@ Function SetRandomThumb2(Actor ActorRef)
 	If NetImmerse.HasNode(ActorRef, NPCLThumb1Node, False) && (NewThumb2 > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCLThumb1Node, NewThumb2, False)
 	EndIf
+	If NetImmerse.HasNode(ActorRef, NPCRThumb1Node, False) && (NewThumb2 > 0.0)
+		NetImmerse.SetNodeScale(ActorRef, NPCRThumb1Node, NewThumb2, False)
+	EndIf
 EndFunction
 Function SetRandomThumb3(Actor ActorRef)
 
@@ -981,6 +1109,9 @@ Function SetRandomThumb3(Actor ActorRef)
 	
 	If NetImmerse.HasNode(ActorRef, NPCLThumb2Node, False) && (NewThumb3 > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCLThumb2Node, NewThumb3, False)
+	EndIf
+	If NetImmerse.HasNode(ActorRef, NPCRThumb2Node, False) && (NewThumb3 > 0.0)
+		NetImmerse.SetNodeScale(ActorRef, NPCRThumb2Node, NewThumb3, False)
 	EndIf
 EndFunction
 
