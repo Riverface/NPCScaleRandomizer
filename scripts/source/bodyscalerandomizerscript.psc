@@ -1,8 +1,8 @@
 Scriptname BodyScaleRandomizerScript Extends Quest
 Import StorageUtil
 Import SexLabFramework
-Import RaceMenuPluginXPMSE
-
+XPMSELib Property XPMSL Auto
+RaceMenuPluginXPMSE Property XPMS Auto
 Actor Property PlayerRef Auto
 Spell Property BSRKickSpell Auto
 Spell Property BSRGetSetSpell Auto
@@ -43,19 +43,19 @@ Bool Property NPCSpine0Enable = True Auto Hidden
 Bool Property NPCSpine1Enable = True Auto Hidden
 Bool Property NPCSpine2Enable = True Auto Hidden
 Faction Property BSRInitialized Auto
-Float Property BellyMax = 5.00 Auto Hidden
+Float Property BellyMax = 2.00 Auto Hidden
 Float Property BellyMin = 1.00 Auto Hidden
 Float Property BustMax = 3.50 Auto Hidden
-Float Property BustMin = 0.80 Auto Hidden
+Float Property BustMin = 0.25 Auto Hidden
 Float Property ButtMax = 3.50 Auto Hidden
 Float Property ButtMin = 0.80 Auto Hidden
-Float Property HeightMaxFemale = 2.00 Auto Hidden
-Float Property HeightMaxMale = 2.00 Auto Hidden
+Float Property HeightMaxFemale = 1.5 Auto Hidden
+Float Property HeightMaxMale = 1.5 Auto Hidden
 Float Property HeightMinFemale = 0.75 Auto Hidden
 Float Property HeightMinMale = 0.75 Auto Hidden
-Float Property PenisMax = 1.50 Auto Hidden
+Float Property PenisMax = 3.50 Auto Hidden
 Float Property PenisMin = 0.80 Auto Hidden
-Float Property UpdateInterval = 10.00 Auto Hidden
+Float Property UpdateInterval = 1.00 Auto Hidden
 Float Property WeightMax = 100.00 Auto Hidden
 Float Property WeightMin = 0.00 Auto Hidden
 Float Property NPCCalfMin = 0.75 Auto Hidden
@@ -63,56 +63,56 @@ Float Property NPCCalfMax = 2.00 Auto Hidden
 Float Property NPCClavicleMin = 0.75 Auto Hidden
 Float Property NPCClavicleMax = 2.00 Auto Hidden
 Float Property NPCThumb0Min = 0.75 Auto Hidden
-Float Property NPCThumb0Max = 2.00 Auto Hidden
+Float Property NPCThumb0Max = 1.10 Auto Hidden
 Float Property NPCThumb1Min = 0.75 Auto Hidden
-Float Property NPCThumb1Max = 2.00 Auto Hidden
+Float Property NPCThumb1Max = 1.10 Auto Hidden
 Float Property NPCThumb2Min = 0.75 Auto Hidden
-Float Property NPCThumb2Max = 2.005 Auto Hidden
+Float Property NPCThumb2Max = 1.05 Auto Hidden
 Float Property NPCFinger11Min = 0.5 Auto Hidden
-Float Property NPCFinger11Max = 1.50 Auto Hidden
+Float Property NPCFinger11Max = 1.10 Auto Hidden
 Float Property NPCFinger12Min = 0.5 Auto Hidden
-Float Property NPCFinger12Max = 1.50 Auto Hidden
+Float Property NPCFinger12Max = 1.10 Auto Hidden
 Float Property NPCFinger13Min = 0.5 Auto Hidden
-Float Property NPCFinger13Max = 1.50 Auto Hidden
+Float Property NPCFinger13Max = 1.10 Auto Hidden
 Float Property NPCFinger21Min = 0.5 Auto Hidden
-Float Property NPCFinger21Max = 1.50 Auto Hidden
+Float Property NPCFinger21Max = 1.10 Auto Hidden
 Float Property NPCFinger22Min = 0.5 Auto Hidden
-Float Property NPCFinger22Max = 1.50 Auto Hidden
+Float Property NPCFinger22Max = 1.10 Auto Hidden
 Float Property NPCFinger23Min = 0.5 Auto Hidden
-Float Property NPCFinger23Max = 1.50 Auto Hidden
+Float Property NPCFinger23Max = 1.10 Auto Hidden
 Float Property NPCFinger31Min = 0.5 Auto Hidden
-Float Property NPCFinger31Max = 1.50 Auto Hidden
+Float Property NPCFinger31Max = 1.10 Auto Hidden
 Float Property NPCFinger32Min = 0.5 Auto Hidden
-Float Property NPCFinger32Max = 1.50 Auto Hidden
+Float Property NPCFinger32Max = 1.10 Auto Hidden
 Float Property NPCFinger33Min = 0.5 Auto Hidden
-Float Property NPCFinger33Max = 1.50 Auto Hidden
+Float Property NPCFinger33Max = 1.10 Auto Hidden
 Float Property NPCFinger41Min = 0.5 Auto Hidden
-Float Property NPCFinger41Max = 1.50 Auto Hidden
+Float Property NPCFinger41Max = 1.10 Auto Hidden
 Float Property NPCFinger42Min = 0.5 Auto Hidden
-Float Property NPCFinger42Max = 2.00 Auto Hidden
-Float Property NPCFinger43Max = 1.50 Auto Hidden
+Float Property NPCFinger42Max = 1.10 Auto Hidden
+Float Property NPCFinger43Max = 1.10 Auto Hidden
 Float Property NPCFinger43Min = 0.5 Auto Hidden
 Float Property NPCFootMax = 1.50 Auto Hidden
 Float Property NPCFootMin = 0.5 Auto Hidden
 Float Property NPCForearmMax = 1.50 Auto Hidden
 Float Property NPCForearmMin = 0.5 Auto Hidden
-Float Property NPCHandMax = 1.50 Auto Hidden
+Float Property NPCHandMax = 2.25 Auto Hidden
 Float Property NPCHandMin = 0.5 Auto Hidden
-Float Property NPCThighMax = 1.50 Auto Hidden
+Float Property NPCThighMax = 2.25 Auto Hidden
 Float Property NPCThighMin = 0.5 Auto Hidden
-Float Property NPCLToe0Max = 1.50 Auto Hidden
+Float Property NPCLToe0Max = 2.25 Auto Hidden
 Float Property NPCLToe0Min = 0.5 Auto Hidden
-Float Property NPCUpperArmMax = 1.50 Auto Hidden
+Float Property NPCUpperArmMax = 2.50 Auto Hidden
 Float Property NPCUpperArmMin = 0.5 Auto Hidden
-Float Property NPCPelvisMax = 1.50 Auto Hidden
+Float Property NPCPelvisMax = 2.50 Auto Hidden
 Float Property NPCPelvisMin = 0.5 Auto Hidden
-Float Property NPCToe0Max = 1.50 Auto Hidden
+Float Property NPCToe0Max = 2.50 Auto Hidden
 Float Property NPCToe0Min = 0.5 Auto Hidden
-Float Property NPCSpine1Max = 1.50 Auto Hidden
+Float Property NPCSpine1Max = 2.50 Auto Hidden
 Float Property NPCSpine1Min = 0.5 Auto Hidden
-Float Property NPCSpine2Max = 1.50 Auto Hidden
+Float Property NPCSpine2Max = 2.50 Auto Hidden
 Float Property NPCSpine2Min = 0.5 Auto Hidden
-Float Property NPCSpineMax = 1.50 Auto Hidden
+Float Property NPCSpineMax = 2.50 Auto Hidden
 Float Property NPCSpineMin = 0.5 Auto Hidden
 Int Property GetActorKey = 49 Auto Hidden
 Int Property NeckGapModKey Auto Hidden
@@ -225,6 +225,7 @@ Float Property HeightDevRedguardMaxMale = 0.00 Auto Hidden
 Float Property HeightDevRedguardMinMale = 0.00 Auto Hidden
 Float Property HeightDevWoodElfMaxMale = 0.00 Auto Hidden
 Float Property HeightDevWoodElfMinMale = 0.00 Auto Hidden
+float[] Node_position
 Float Function GetRaceDev(Actor ActorRef, Int flag)
 	If (ActorRef == None)
 		return 0.0
@@ -416,7 +417,12 @@ Function GetRandomScale(Actor ActorRef)
 	GetRandomThumb3(ActorRef)
 	ActorRef.AddToFaction(BSRInitialized)
 EndFunction
-
+Function NodePositionToNew(Actor RefActor, string Node, float newPos, Int changeCoord)
+	Int iSex = RefActor.GetLeveledActorBase().GetSex()
+	Node_position = XPMS.GetNodePosition(RefActor, iSex, Node)
+	Node_position[changeCoord] = newPos
+	XPMS.SetNodePosition(RefActor, iSex, Node, Node_position)
+EndFunction
 Function GetRandomThigh(Actor ActorRef)
 			Float Random = Utility.RandomFloat(NPCThighMin, NPCThighMax)		
 		SetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Thigh", Random)
@@ -773,6 +779,9 @@ Function SetScaleHeight(Actor ActorRef)
 	EndIf
 EndFunction
 
+Float ThighOffset = 0.0
+Float CalfOffset = 0.0
+
 Function SetRandomThigh(Actor ActorRef)
 	Float NewThigh = 0.0
 	If GetIntValue(ActorRef.GetLeveledActorBase(), "BSR_NoThigh") != 1
@@ -791,9 +800,12 @@ Function SetRandomThigh(Actor ActorRef)
 	
 	If NetImmerse.HasNode(ActorRef, NPCRThighNode, False) && (NewThigh > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCRThighNode, NewThigh, False)
-		XPMS
 	EndIf
+	NodePositionToNew(ActorRef, NPCLThighNode, newThigh, 1)
+	NodePositionToNew(ActorRef, NPCRThighNode, newThigh, 1)
+	ThighOffset = newThigh
 EndFunction
+
 Function SetRandomCalf(Actor ActorRef)
 
 	Float NewCalf = 0.0
@@ -808,23 +820,25 @@ Function SetRandomCalf(Actor ActorRef)
 	If NetImmerse.HasNode(ActorRef, NPCRCalfNode, False) && (NewCalf > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCRCalfNode, NewCalf, False)
 	EndIf
-	If NetImmerse.HasNode(ActorRef, NPCRCalfNode, False) && (NewCalf > 0.0)
-		NetImmerse.SetNodeScale(ActorRef, NPCRCalfNode, NewCalf, False)
-	EndIf
+	NodePositionToNew(ActorRef, NPCLThighNode, NewCalf, 1)
+	NodePositionToNew(ActorRef, NPCRThighNode, NewCalf, 1)
+	CalfOffset = newCalf
 EndFunction
+
 Function SetRandomPelvis(Actor ActorRef)
-		Float NewPelvis
+		Float NewPelvis = 0.0
 		If GetIntValue(ActorRef.GetLeveledActorBase(), "BSR_NoPelvis") != 1
 			NewPelvis = GetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Pelvis")
-		
 	EndIf
 	
 	If NetImmerse.HasNode(ActorRef, NPCPelvisNode, False) && (NewPelvis > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCPelvisNode, NewPelvis, False)
 	EndIf
+		NodePositionToNew(ActorRef, NPCLThighNode,  (((CalfOffset - 1) + (ThighOffset- 1))), 1)
 EndFunction
-Function SetRandomUpperArm(Actor ActorRef)
 
+Function SetRandomUpperArm(Actor ActorRef)
+	
 	Float NewUpperArm = 0.0
 		If GetIntValue(ActorRef.GetLeveledActorBase(), "BSR_NoUpperArm") != 1
 			NewUpperArm = GetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_UpperArm")
@@ -852,48 +866,53 @@ Function SetRandomForearm(Actor ActorRef)
 	If NetImmerse.HasNode(ActorRef, NPCRForearmNode, False) && (NewForearm > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCRForearmNode, NewForearm, False)
 	EndIf
+	bool iSex = ActorRef.GetLeveledActorBase().GetSex() as bool	
+	NodePositionToNew(ActorRef, NPCLForearmNode, NewForearm, 1)
+	NodePositionToNew(ActorRef, NPCRForearmNode, NewForearm, 1)
 EndFunction
 Function SetRandomSpine0(Actor ActorRef)
-
 	Float NewSpine0 = 0.0
-		If GetIntValue(ActorRef.GetLeveledActorBase(), "BSR_NoSpine0") != 1
-			NewSpine0 = GetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Spine0")
-		
+	If GetIntValue(ActorRef.GetLeveledActorBase(), "BSR_NoSpine0") != 1
+		NewSpine0 = GetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Spine0")
 	EndIf
-	
 	If NetImmerse.HasNode(ActorRef, NPCSpineNode, False) && (NewSpine0 > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCSpineNode, NewSpine0, False)
 	EndIf
+	Int iSex = ActorRef.GetLeveledActorBase().GetSex()
+	NodePositionToNew(ActorRef, NPCSpineNode, NewSpine0, 1)
 EndFunction
+
 Function SetRandomSpine1(Actor ActorRef)
 
 	Float NewSpine1 = 0.0
 		If GetIntValue(ActorRef.GetLeveledActorBase(), "BSR_NoSpine1") != 1
-			NewSpine1 = GetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Belly")
+			NewSpine1 = GetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Spine1")
 		
 	EndIf
 	
 	If NetImmerse.HasNode(ActorRef, NPCSpine1Node, False) && (NewSpine1 > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCSpine1Node, NewSpine1, False)
 	EndIf
+	NodePositionToNew(ActorRef, NPCSpine1Node, NewSpine1, 1)
 EndFunction
 Function SetRandomSpine2(Actor ActorRef)
 
 	Float NewSpine2 = 0.0
 		If GetIntValue(ActorRef.GetLeveledActorBase(), "BSR_NoSpine2") != 1
-			NewSpine2 = GetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Belly")
+			NewSpine2 = GetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Spine2")
 		
 	EndIf
 	
 	If NetImmerse.HasNode(ActorRef, NPCSpine2Node, False) && (NewSpine2 > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCSpine2Node, NewSpine2, False)
 	EndIf
+	NodePositionToNew(ActorRef, NPCSpine2Node, NewSpine2, 1)
 EndFunction
 Function SetRandomFinger11(Actor ActorRef)
 
 	Float NewFinger11 = 0.0
 		If GetIntValue(ActorRef.GetLeveledActorBase(), "BSR_NoFinger11") != 1
-			NewFinger11 = GetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Belly")
+			NewFinger11 = GetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Finger11")
 		
 	EndIf
 	
@@ -908,7 +927,7 @@ Function SetRandomFinger12(Actor ActorRef)
 
 	Float NewFinger12 = 0.0
 		If GetIntValue(ActorRef.GetLeveledActorBase(), "BSR_NoFinger12") != 1
-			NewFinger12 = GetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Belly")
+			NewFinger12 = GetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Finger12")
 		
 	EndIf
 	
@@ -918,12 +937,14 @@ Function SetRandomFinger12(Actor ActorRef)
 	If NetImmerse.HasNode(ActorRef, NPCRFinger10Node, False) && (NewFinger12 > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCRFinger10Node, NewFinger12, False)
 	EndIf
+	Int iSex = ActorRef.GetLeveledActorBase().GetSex()
+
 EndFunction
 Function SetRandomFinger13(Actor ActorRef)
 
 	Float NewFinger13 = 0.0
 		If GetIntValue(ActorRef.GetLeveledActorBase(), "BSR_NoFinger13") != 1
-			NewFinger13 = GetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Belly")
+			NewFinger13 = GetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Finger13")
 		
 	EndIf
 	
@@ -933,12 +954,13 @@ Function SetRandomFinger13(Actor ActorRef)
 	If NetImmerse.HasNode(ActorRef, NPCRFinger12Node, False) && (NewFinger13 > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCRFinger12Node, NewFinger13, False)
 	EndIf
+	Int iSex = ActorRef.GetLeveledActorBase().GetSex()
 EndFunction
 Function SetRandomFinger21(Actor ActorRef)
 
 	Float NewFinger21 = 0.0
 		If GetIntValue(ActorRef.GetLeveledActorBase(), "BSR_NoFinger21") != 1
-			NewFinger21 = GetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Belly")
+			NewFinger21 = GetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Finger21")
 		
 	EndIf
 	
@@ -948,27 +970,29 @@ Function SetRandomFinger21(Actor ActorRef)
 	If NetImmerse.HasNode(ActorRef, NPCRFinger20Node, False) && (NewFinger21 > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCRFinger20Node, NewFinger21, False)
 	EndIf
+	
 EndFunction
 Function SetRandomFinger22(Actor ActorRef)
 
 	Float NewFinger22 = 0.0
 		If GetIntValue(ActorRef.GetLeveledActorBase(), "BSR_NoFinger22") != 1
-			NewFinger22 = GetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Belly")
+			NewFinger22 = GetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Finger22")
 		
 	EndIf
-	
 	If NetImmerse.HasNode(ActorRef, NPCLFinger21Node, False) && (NewFinger22 > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCLFinger21Node, NewFinger22, False)
 	EndIf
 	If NetImmerse.HasNode(ActorRef, NPCRFinger21Node, False) && (NewFinger22 > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCRFinger21Node, NewFinger22, False)
 	EndIf
+	Int iSex = ActorRef.GetLeveledActorBase().GetSex()
+
 EndFunction
 Function SetRandomFinger23(Actor ActorRef)
 
 	Float NewFinger23 = 0.0
 		If GetIntValue(ActorRef.GetLeveledActorBase(), "BSR_NoFinger23") != 1
-			NewFinger23 = GetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Belly")
+			NewFinger23 = GetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Finger23")
 		
 	EndIf
 	
@@ -978,12 +1002,14 @@ Function SetRandomFinger23(Actor ActorRef)
 	If NetImmerse.HasNode(ActorRef, NPCRFinger22Node, False) && (NewFinger23 > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCRFinger22Node, NewFinger23, False)
 	EndIf
+	Int iSex = ActorRef.GetLeveledActorBase().GetSex()
+
 EndFunction
 Function SetRandomFinger31(Actor ActorRef)
 
 	Float NewFinger31 = 0.0
 		If GetIntValue(ActorRef.GetLeveledActorBase(), "BSR_NoFinger31") != 1
-			NewFinger31 = GetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Belly")
+			NewFinger31 = GetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Finger31")
 		
 	EndIf
 	
@@ -993,12 +1019,14 @@ Function SetRandomFinger31(Actor ActorRef)
 	If NetImmerse.HasNode(ActorRef, NPCRFinger30Node, False) && (NewFinger31 > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCRFinger30Node, NewFinger31, False)
 	EndIf
+	Int iSex = ActorRef.GetLeveledActorBase().GetSex()
+
 EndFunction
 Function SetRandomFinger32(Actor ActorRef)
 
 	Float NewFinger32 = 0.0
 		If GetIntValue(ActorRef.GetLeveledActorBase(), "BSR_NoFinger32") != 1
-			NewFinger32 = GetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Belly")
+			NewFinger32 = GetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Finger32")
 		
 	EndIf
 	
@@ -1008,12 +1036,14 @@ Function SetRandomFinger32(Actor ActorRef)
 	If NetImmerse.HasNode(ActorRef, NPCRFinger31Node, False) && (NewFinger32 > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCRFinger31Node, NewFinger32, False)
 	EndIf
+	Int iSex = ActorRef.GetLeveledActorBase().GetSex()
+
 EndFunction
 Function SetRandomFinger33(Actor ActorRef)
 
 	Float NewFinger33 = 0.0
 		If GetIntValue(ActorRef.GetLeveledActorBase(), "BSR_NoFinger33") != 1
-			NewFinger33 = GetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Belly")
+			NewFinger33 = GetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Finger33")
 		
 	EndIf
 	
@@ -1023,12 +1053,14 @@ Function SetRandomFinger33(Actor ActorRef)
 	If NetImmerse.HasNode(ActorRef, NPCRFinger32Node, False) && (NewFinger33 > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCRFinger32Node, NewFinger33, False)
 	EndIf
+	Int iSex = ActorRef.GetLeveledActorBase().GetSex()
+
 EndFunction
 Function SetRandomFinger41(Actor ActorRef)
 
 	Float NewFinger41 = 0.0
 		If GetIntValue(ActorRef.GetLeveledActorBase(), "BSR_NoFinger41") != 1
-			NewFinger41 = GetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Belly")
+			NewFinger41 = GetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Finger41")
 		
 	EndIf
 	
@@ -1038,12 +1070,14 @@ Function SetRandomFinger41(Actor ActorRef)
 	If NetImmerse.HasNode(ActorRef, NPCRFinger40Node, False) && (NewFinger41 > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCRFinger40Node, NewFinger41, False)
 	EndIf
+	Int iSex = ActorRef.GetLeveledActorBase().GetSex()
+
 EndFunction
 Function SetRandomFinger42(Actor ActorRef)
 
 	Float NewFinger42 = 0.0
 		If GetIntValue(ActorRef.GetLeveledActorBase(), "BSR_NoFinger42") != 1
-			NewFinger42 = GetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Belly")
+			NewFinger42 = GetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Finger42")
 		
 	EndIf
 	
@@ -1053,12 +1087,14 @@ Function SetRandomFinger42(Actor ActorRef)
 	If NetImmerse.HasNode(ActorRef, NPCRFinger41Node, False) && (NewFinger42 > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCRFinger41Node, NewFinger42, False)
 	EndIf
+	Int iSex = ActorRef.GetLeveledActorBase().GetSex()
+
 EndFunction
 Function SetRandomFinger43(Actor ActorRef)
 
 	Float NewFinger43 = 0.0
 		If GetIntValue(ActorRef.GetLeveledActorBase(), "BSR_NoFinger43") != 1
-			NewFinger43 = GetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Belly")
+			NewFinger43 = GetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Finger43")
 		
 	EndIf
 	
@@ -1068,12 +1104,14 @@ Function SetRandomFinger43(Actor ActorRef)
 	If NetImmerse.HasNode(ActorRef, NPCRFinger42Node, False) && (NewFinger43 > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCRFinger42Node, NewFinger43, False)
 	EndIf
+	Int iSex = ActorRef.GetLeveledActorBase().GetSex()
+
 EndFunction
 Function SetRandomThumb1(Actor ActorRef)
 
 	Float NewThumb1 = 0.0
 		If GetIntValue(ActorRef.GetLeveledActorBase(), "BSR_NoThumb1") != 1
-			NewThumb1 = GetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Belly")
+			NewThumb1 = GetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Thumb1")
 		
 	EndIf
 	
@@ -1083,12 +1121,14 @@ Function SetRandomThumb1(Actor ActorRef)
 	If NetImmerse.HasNode(ActorRef, NPCRThumb0Node, False) && (NewThumb1 > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCRThumb0Node, NewThumb1, False)
 	EndIf
+	Int iSex = ActorRef.GetLeveledActorBase().GetSex()
+
 EndFunction
 Function SetRandomThumb2(Actor ActorRef)
 
 	Float NewThumb2 = 0.0
 		If GetIntValue(ActorRef.GetLeveledActorBase(), "BSR_NoThumb2") != 1
-			NewThumb2 = GetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Belly")
+			NewThumb2 = GetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Thumb2")
 		
 	EndIf
 	
@@ -1098,12 +1138,14 @@ Function SetRandomThumb2(Actor ActorRef)
 	If NetImmerse.HasNode(ActorRef, NPCRThumb1Node, False) && (NewThumb2 > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCRThumb1Node, NewThumb2, False)
 	EndIf
+	Int iSex = ActorRef.GetLeveledActorBase().GetSex()
+
 EndFunction
 Function SetRandomThumb3(Actor ActorRef)
 
 	Float NewThumb3 = 0.0
 		If GetIntValue(ActorRef.GetLeveledActorBase(), "BSR_NoThumb3") != 1
-			NewThumb3 = GetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Belly")
+			NewThumb3 = GetFloatValue(ActorRef.GetLeveledActorBase(), "BSR_Thumb3")
 		
 	EndIf
 	
@@ -1113,6 +1155,8 @@ Function SetRandomThumb3(Actor ActorRef)
 	If NetImmerse.HasNode(ActorRef, NPCRThumb2Node, False) && (NewThumb3 > 0.0)
 		NetImmerse.SetNodeScale(ActorRef, NPCRThumb2Node, NewThumb3, False)
 	EndIf
+	Int iSex = ActorRef.GetLeveledActorBase().GetSex()
+
 EndFunction
 
 
